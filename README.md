@@ -130,7 +130,9 @@ python run_seg.py --config {path to config} --dataset_name {gta or synthia} --so
 ## Training
 
 For convenience, we provide  [annotated config files](configs/cdda)
-of the final CDDA with DAFormer, HRDA, and MIC on each benchmark. A training job (e.g. CDDA(MIC) on SYNTHIA→Cityscapes) can be launched using:
+of the final CDDA with DAFormer, HRDA, and MIC on each benchmark. <br>
+Before training, modify parameters 'matrix_path', 'croped_images_path', and 'croped_labels_path' in the annotated config file.<br>
+A training job (e.g. CDDA(MIC) on SYNTHIA→Cityscapes) can be launched using:
 
 ```shell
 python run_experiments.py --config configs/cdda/synthiaHR2csHR_cdda_mic
