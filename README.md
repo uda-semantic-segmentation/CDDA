@@ -37,7 +37,7 @@ as the DAFormer network architecture. When applied to DAFormer,
 HRDA, and MIC, our method yields performance gains of 2.1\%, 1.5\%, 
 and 1.4\% on the SYNTHIA-to-Cityscapes benchmark, and 1.3\%, 1.3\%, 
 and 1.0\% on the GTA-to-Cityscapes benchmark, respectively.
-<img src="resources/results.png" width="500">
+<img src="resources/results.png">
 
 
 The improved domain adaptation performance is also reflected in the example
