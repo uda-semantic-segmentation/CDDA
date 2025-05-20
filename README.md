@@ -125,6 +125,9 @@ depth distribution over categories on them. This will take some time.<br>
 --not_get_images and --not_get_distributions are optional and respectively represent not generating images and not calculating distributions
 ```shell
 python run_seg.py --config {path to config} --dataset_name {gta or synthia} --source_preprocessed_path {path to save images and distribution} [--not_get_images] [--not_get_distributions]
+
+#Example: CDDA with MIC on synthia→cityscapes
+python run_seg.py --config configs/cdda/synthiaHR2csHR_cdda_mic --dataset_name synthia --source_preprocessed_path preprocessed/synthia_mic
 ```
 
 ## Training
@@ -132,6 +135,11 @@ python run_seg.py --config {path to config} --dataset_name {gta or synthia} --so
 For convenience, we provide  [annotated config files](configs/cdda)
 of the final CDDA with DAFormer, HRDA, and MIC on each benchmark. <br>
 Before training, modify parameters 'matrix_path', 'croped_images_path', and 'croped_labels_path' in the annotated config file.<br>
+```annotated config file
+matrix_path='preprocessed/synthia_mic/synthia_9400_distribution.pth'
+croped_images_path='preprocessed/synthia_mic/images'
+croped_labels_path='preprocessed/synthia_mic/labels'
+```
 A training job (e.g. CDDA(MIC) on SYNTHIA→Cityscapes) can be launched using:
 
 ```shell
